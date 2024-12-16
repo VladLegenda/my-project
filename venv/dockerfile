@@ -1,0 +1,8 @@
+FROM python:3.12.7-slim
+
+ENV TOKEN='7569317359:AAFFpmCyq42fycyH1-1yUge_sCrJrVLMCKM'
+
+COPY requirements.txt requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+COPY Bot_may.py Bot_may.py
+ENTRYPOINT [ "python", "Bot_may.py" ]
